@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "inspect:data": "node --inspect --debug-brk updateData.js",
+    "dev:data": "nodemon updateData.js",
+    "inspect:data": "nodemon --inspect --debug-brk updateData.js",
     "start:data": "node updateData.js",
     "start": "node -e \"console.log('open browser at http:/localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
@@ -11,10 +12,13 @@
     "postinstall": "node postinstall.js && echo done"
   },
   "dependencies": {
+    "cheerio": "^0.22.0",
     "chrome-remote-interface": "^0.19.1",
     "got": "^6.7.1",
+    "nodemon": "^1.11.0",
     "ovr-audio": "~0.1.0",
     "ovrui": "~0.1.0",
+    "prettier": "^1.2.2",
     "react": "15.3.2",
     "react-native": "0.37.0",
     "react-vr": "~0.1.0",
