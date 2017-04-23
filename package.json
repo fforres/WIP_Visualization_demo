@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev:data": "nodemon updateData.js",
-    "inspect:data": "nodemon --inspect --debug-brk updateData.js",
-    "start:data": "node updateData.js",
+    "dev:data": "nodemon ./dataCrawler/updateData.js",
+    "inspect:data": "nodemon --inspect --debug-brk ./dataCrawler/updateData.js",
+    "start:data": "node ./dataCrawler/updateData.js",
     "start": "node -e \"console.log('open browser at http:/localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
@@ -14,16 +14,27 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "chrome-remote-interface": "^0.19.1",
+    "debug": "^2.6.4",
     "got": "^6.7.1",
     "nodemon": "^1.11.0",
     "ovr-audio": "~0.1.0",
     "ovrui": "~0.1.0",
+    "pause-queue": "^0.1.0",
     "prettier": "^1.2.2",
     "react": "15.3.2",
     "react-native": "0.37.0",
     "react-vr": "~0.1.0",
     "react-vr-web": "~0.1.0",
     "three": "^0.80.1",
+    "twitter": "^1.7.0",
     "xopen": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
   }
 }
